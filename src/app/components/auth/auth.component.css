@@ -1,0 +1,46 @@
+
+.auth-page {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid: "b b ."
+         "b b a"
+         "b b .";
+  grid-template-columns: repeat(2, 1fr) minmax(0, 1fr);
+  grid-template-rows: 1fr minmax(0, 1fr) 1fr ;
+  grid-gap: 1em;
+}
+
+.background {
+  grid-area: b;
+  background-image: url("http://localhost/projpoke/pokebackground.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.auth-container {
+  grid-area: a;
+  justify-self: center;
+  max-width: 80%;
+  width: 80%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .auth-page {
+    height: 100%;
+    width: 100%;
+    grid: "b";
+  }
+  .background {
+    grid-area: b;
+    background-position-y: 200px;
+  }
+  .auth-container {
+    width: 80%;
+    height: 70%;
+    align-self: center;
+    justify-self: center;
+    grid-area: b;
+  }
+
+}
